@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/txtDiameter"
+            android:text="Diameter:"
+            android:textColor="#000"
+            android:layout_marginTop="45dp"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:inputType="numberDecimal"
+            android:background="@drawable/round_corner"
+            android:textColor="#003366"
+            android:ems="10"
+            android:id="@+id/etDiameter"
+
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/txtDiameter"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/txtTreeAge"
+            android:text="Tree Age:"
+            android:textColor="#000"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/etDiameter" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:inputType="numberDecimal"
+            android:background="@drawable/round_corner"
+            android:textColor="#003366"
+            android:ems="10"
+            android:id="@+id/etTreeAge"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/txtTreeAge"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save to Database!"
+            android:id="@+id/saveDatabase"
+            android:textColor="#fff"
+            android:background="#678C3F"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"/>
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

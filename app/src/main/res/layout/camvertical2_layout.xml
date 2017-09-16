@@ -1,0 +1,114 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:layout_gravity="left|center_vertical">
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:inputType="textPersonName"
+            android:hint="Enter DBH"
+            android:gravity="center|left"
+            android:ems="10"
+            android:id="@+id/etDBH"
+            android:background="@drawable/round_corner"
+            android:textColor="#000000"
+            android:padding="5dp"
+            android:layout_below="@+id/tvLatitude"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:inputType="textPersonName"
+            android:hint="Enter CRL"
+            android:gravity="center|left"
+            android:ems="10"
+            android:id="@+id/etCRL"
+            android:background="@drawable/round_corner"
+            android:textColor="#000000"
+            android:padding="5dp"
+            android:layout_alignTop="@+id/txtArduino"
+            android:layout_alignStart="@+id/etDBH" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tvLatitude"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tvLongitude"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/txtArduino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:rotation="360"
+            android:layout_marginTop="80dp"
+            android:textSize="50sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <org.opencv.android.JavaCameraView
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:visibility="gone"
+            android:rotation="360"
+            android:layout_marginBottom="110dp"
+            android:id="@+id/camVertical"
+            android:screenOrientation="portrait"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            opencv:camera_id="any"/>
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="150dp"
+            android:background="#4CAF50"
+            android:layout_marginStart="30dp"
+            android:layout_alignTop="@+id/vertical1"
+            android:layout_toEndOf="@+id/btnNext"
+            android:layout_above="@+id/btnNext"
+            android:id="@+id/vertical2"
+            android:layout_marginBottom="120dp"/>
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="150dp"
+            android:id="@+id/vertical1"
+            android:layout_marginEnd="30dp"
+            android:layout_above="@+id/btnNext"
+            android:layout_toStartOf="@+id/btnNext"
+            android:layout_marginBottom="120dp"
+            android:background="#4CAF50"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:rotation="360"
+            android:text="Next"
+            android:textColor="#fff"
+            android:background="#4CAF50"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp" />
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>
